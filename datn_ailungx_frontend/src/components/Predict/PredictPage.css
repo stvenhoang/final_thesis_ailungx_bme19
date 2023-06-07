@@ -1,0 +1,133 @@
+.predict-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.predict-page-title {
+    font-weight: 700;
+    font-size: 1.8rem;
+    background: linear-gradient(to left, #f901fc, #f901fc, #37d1eb, #37d1eb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 2rem;
+    font-family: 'Arsenal', sans-serif;
+}
+
+.predict-search-input {
+    border: none;
+    padding: 0.35rem;
+    padding-left: 0.7rem;
+    font-family: 'Arsenal', sans-serif;
+    margin: 0.75rem 0;
+    border-radius: 10px;
+    width: 800px;
+    height: 70px;
+    font-size: medium;
+    background-color: #222222;
+    color: aliceblue;
+  }
+
+.predict-search-label-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 800px;
+}
+
+.predict-search-label{
+    font-size: 1rem;
+    color: #fff;
+    letter-spacing: 0.1rem;
+    margin-top: 0.5rem;
+    font-weight: bold;
+    font-family: 'Arsenal', sans-serif;
+}
+
+
+.predict-search-select {
+    margin-left: auto;
+    position: relative;
+    display: block;
+    width: 200px;
+    border-radius: 5px;
+    height: 40px;
+    background-color: #222222;
+    color: aliceblue;
+    font-size: 1rem;
+    font-weight: medium;
+    font-family: 'Arsenal', sans-serif;
+    padding-left: 5px;
+    z-index: 10;
+}
+
+.predict-search-option{
+    font-family: 'Arsenal', sans-serif;
+}
+
+.predict-one-card{
+    cursor: pointer;
+}
+
+.predict-one-card:hover{
+    transform: scale(1.06);
+}
+  @media screen and (max-width: 1080px) {
+
+    .predict-page-title {
+        font-size: 1.3rem;
+    }
+    .predict-search-input, .predict-search-label-container{
+        width: 450px;
+    }
+
+    .predict-search-label {
+        font-size: 0.8rem
+    }
+    
+    .predict-search-select {
+        height: 30px;
+        width: 140px;
+        /* min-width: px; */
+    }
+  }
+
+  @media screen and (max-width: 550px) {
+    .predict-page-title {
+        font-size: 1.3rem;
+    }
+    .predict-search-input {
+        width: 280px;
+        height: 40px;
+    }
+    .predict-search-label-container {
+        width: 280px;
+    }
+
+    .predict-search-label {
+        font-size: 0.6rem;
+    }
+
+    .predict-search-icon {
+        width: 0.1rem;
+    }
+
+    .predict-search-select {
+        height: 20px;
+        width: 120px;
+        font-size: 0.8rem;
+        /* min-width: px; */
+
+    }
+
+    .predict-search-option{
+        font-size: 0.6rem;
+        display: block;
+        width: 100%;
+        padding: 15px;
+        height: 20px;
+    }
+  }

@@ -1,0 +1,80 @@
+.syndrome-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.syndrome-container1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    border-color: aliceblue;
+    padding: 10px;
+    margin-top: 30px;
+}
+
+.syndrome-container2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    
+    padding: 20px;
+}
+
+.syndrome-label {
+    font-weight: 700;
+    font-size: 1.8rem;
+    background: linear-gradient(to left, #f901fc, #37d1eb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 30px;
+    font-family: 'Arsenal', sans-serif;
+}
+
+.syndrome-label2 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    display: inline;
+    color: aliceblue;
+    margin-bottom: 10px;
+    font-family: 'Arsenal', sans-serif;
+}
+.syndrome-text-label {
+    font-weight: 700;
+    font-size: 1.1rem;
+    display: inline;
+    color: #e76f51;
+    font-family: 'Arsenal', sans-serif;
+}
+
+.syndrome-text {
+    font-size: 1rem;
+    display: inline;
+    color: aliceblue;
+    margin-bottom: 1rem;
+    font-family: 'Arsenal', sans-serif;
+}
+
+@media screen and (max-width: 1080px) {
+    .syndrome-label{
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .syndrome-label{
+        font-size: 1.3rem;
+    }
+
+    .syndrome-label2, .syndrome-text-label{
+        font-size: 1rem;
+    }
+
+    .syndrome-text {
+        font-size: 0.9rem;
+    }
+}

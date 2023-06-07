@@ -1,0 +1,367 @@
+.home-predict-container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    border-radius: 10px;
+    /* min-width: 20%; */
+    /* background-color: aliceblue; */
+}
+
+.home-predict-upload-container {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-predict-result-container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+
+.home-predict-result-container1 {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+    border-radius: 12px;
+    border: 3px solid transparent;
+    border-color: aliceblue;
+}
+
+.home-predict-result-container2 {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.home-predict-result-container3 {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 900px;
+    margin-top: 40px;
+    border-radius: 12px;
+    border: 3px solid transparent;
+    border-color: #00c7f0;
+}
+
+
+.home-predict-title {
+    margin-top: 50px;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none solid rgb(255, 255, 255);
+    color: aliceblue;
+    margin-bottom: 40px;
+    font-family: 'Arsenal', sans-serif;
+}
+
+.home-predict-result-title {
+    margin-top: 20px;
+    font-weight: 700;
+    font-size: 1.8rem;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none solid rgb(255, 255, 255);
+    color: #c4eb42;
+    font-family: 'Arsenal', sans-serif;
+}
+
+.home-predict-img-title {
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-align: center;
+    background: linear-gradient(to left, #0073f0 , #00e2f0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+    font-family: 'Arsenal', sans-serif;
+}
+
+.home-predict-result-line {
+    height: 400px;
+    width: 2px;
+    text-align: center;
+    background-image: linear-gradient(to left, #0073f0 , #00e2f0);;
+}
+.home-predict-img, .home-predict-heatmapimg {
+    margin: 20px;
+    width: 400px;
+    border-radius: 10px;
+}
+
+.home-predict-upload-img
+{
+    width: 400px;
+}
+
+.home-predict-btn-save {
+    cursor: pointer;
+    border: none;
+    align-self: center;
+    font-size: 1.3rem;
+    font-family: 'Arsenal', sans-serif;
+    height: 60px;
+    width: 900px;
+    margin-top: 50px;
+    border-radius: 10px;
+    color: aliceblue;
+    font-weight: bold;
+    padding: 0.5rem 2rem;
+    background-color: #1e4675;
+}
+
+.home-predict-btn-predict {
+    cursor: pointer;
+    border: none;
+    align-self: center;
+    font-size: 1.3rem;
+    font-family: 'Arsenal', sans-serif;
+    height: 60px;
+    width: 446px;
+    margin-top: 50px;
+    border-radius: 10px;
+    color: aliceblue;
+    font-weight: bold;
+    padding: 0.5rem 2rem;
+    background-color: #1e4675;
+}
+
+.home-predict-result{
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: aliceblue;
+    margin-top: 20px;
+    
+    padding: 20px;
+    text-align: center;
+    font-family: 'Arsenal', sans-serif;
+}
+
+.home-predict-loading{
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: aliceblue;
+    margin-top: 50px;
+    border-radius: 12px;
+    border: 3px solid transparent;
+    border-color: aliceblue;
+    width: 446px;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Arsenal', sans-serif;
+}
+
+.home-predict-error{
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: red;
+    margin-top: 30px;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Arsenal', sans-serif;
+}
+
+.home-predict-save-form {
+    display: flex;
+    margin-top: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    width: 300px;
+    min-width: 20%;
+    flex-direction: column;
+    font-family: 'Arsenal', sans-serif;
+}
+
+.home-predict-name-input {
+    border: none;
+    padding: 0.35rem;
+    padding-left: 0.7rem;
+    font-family: 'Arsenal', sans-serif;
+    margin: 0.75rem 0;
+    border-radius: 10px;
+    width: 100%;
+    height: 60px;
+    font-size: medium;
+    background-color: #222222;
+    color: aliceblue;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+#upload-icon {
+    margin-bottom: 6px;
+    font-size: 2.5rem;
+}
+
+
+.custom-file-upload {
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 450px;
+    height: 76px;
+    border: 3px dashed;
+    border-radius: 6px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    cursor: pointer;
+    font-family: 'Arsenal', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: aliceblue;
+}
+
+
+.custom-file-upload:hover {
+    background: linear-gradient(to left, #f901fc, #f901fc, #37d1eb, #37d1eb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@media screen and (max-width: 1080px) {
+    #upload-icon {
+        font-size: 1.3rem;
+    }
+    .custom-file-upload{
+        width: 200px;
+        height: 50px;
+        font-size: 1rem;
+        padding: 0 0 0 0;
+    }
+    .home-predict-title {
+        font-size: 1.3rem;
+    }
+
+    .home-predict-img-title {
+        font-size: 1.3rem;
+    }
+
+    .home-predict-result-line {
+        height: 300px;
+    }
+    .home-predict-img, .home-predict-heatmapimg, .home-predict-upload-img {
+        width: 300px;
+    }
+
+    .home-predict-loading {
+        width: 346px;
+    }
+
+    .home-predict-result-container3 {
+        width: 487px;
+    }
+
+    .home-predict-result {
+        margin-top: 10px;
+        padding: 10px;
+    }
+    .home-predict-btn-save {
+        width: 487px;
+    }
+
+    .home-predict-btn-predict {
+        width: 346px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+.home-predict-container2 {
+    width: 200px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+.home-predict-title {
+    font-size: 1rem;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+
+.home-predict-img-title {
+    font-size: 1rem;
+}
+
+.home-predict-result-line {
+    display: none;
+}
+
+.home-predict-img, .home-predict-heatmapimg {
+    width: 200px;
+}
+
+.home-predict-upload-img {
+    width: 170px;
+}
+
+.home-predict-btn-save {
+    height: 40px;
+    width: 296px;
+    font-size: 1rem;
+}
+
+.home-predict-btn-predict {
+    height: 40px;
+    width: 246px;
+    font-size: 1rem;
+}
+
+.home-predict-loading {
+    width: 246px;
+    font-size: 1rem;
+    padding: 15px;
+}
+
+.home-predict-error {
+    font-size: 1rem;
+    padding: 15px;
+}
+
+.home-predict-result-title {
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+#upload-icon {
+    font-size: 0.8rem;
+}
+.custom-file-upload{
+    width: 140px;
+    height: 40px;
+    font-size: 0.6rem;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    margin-left: 15px;
+}
+
+.home-predict-result-container3 {
+    width: 296px;
+}
+
+.home-predict-result {
+    font-size: 1rem;
+    padding: 15px;
+}
+}

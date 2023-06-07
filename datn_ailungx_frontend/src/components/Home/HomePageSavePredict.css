@@ -1,0 +1,159 @@
+.home-predict-save-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+  }
+  .home-predict-save-container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    height: 800px;
+    width: 30rem;
+    min-width: 20%;
+    background-color: #161616;
+  }
+  
+  .home-predict-save-title {
+    font-weight: 700;
+    font-size: 1.5rem;
+    background: linear-gradient(to left, #f901fc, #f901fc, #37d1eb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+    font-family: 'Arsenal', sans-serif;
+  }
+  .home-predict-save-form {
+    display: flex;
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    width: 400px;
+    min-width: 20%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-family: 'Arsenal', sans-serif;
+  }
+  .home-predict-save-input {
+    border: none;
+    padding: 0.35rem;
+    padding-left: 0.7rem;
+    font-family: 'Arsenal', sans-serif;
+    margin: 0.75rem 0;
+    border-radius: 10px;
+    width: 100%;
+    height: 60px;
+    font-size: medium;
+    background-color: #222222;
+    color: aliceblue;
+  }
+  
+  .home-predict-save-input:active{
+    background-color: #222222;
+  }
+
+  .home-predict-save-input-message {
+    border: none;
+    padding: 0.35rem;
+    padding-left: 0.7rem;
+    font-family: 'Arsenal', sans-serif;
+    margin: 0.75rem 0;
+    border-radius: 10px;
+    width: 100%;
+    height: 100px;
+    font-size: medium;
+    background-color: #222222;
+    color: aliceblue;
+  }
+  
+  
+  .home-predict-save-label-container {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+  }
+  
+  .material-symbols-outlined{
+    color: aliceblue;
+    padding-top: 0.35rem;
+    margin-right: 0.5rem;
+  }
+  
+  .home-predict-save-label {
+    font-size: 1rem;
+    color: #fff;
+    letter-spacing: 0.1rem;
+    margin-top: 0.5rem;
+    font-weight: bold;
+    font-family: 'Arsenal', sans-serif;
+  }
+
+  .home-predict-save-select {
+    width: 200px;
+    border-radius: 5px;
+    height: 40px;
+    background-color: #222222;
+    color: aliceblue;
+    font-size: 1rem;
+    font-weight: medium;
+    font-family: 'Arsenal', sans-serif;
+    padding-left: 5px;
+    z-index: 10;
+    margin-bottom: 1rem;
+}
+  
+  
+  .home-predict-save-btn2 {
+    cursor: pointer;
+    border: none;
+    align-self: center;
+    margin-top: 30px;
+    font-size: 1.3rem;
+    font-family: 'Arsenal', sans-serif;
+    padding: 0.65rem;
+    width: 100%;
+    height: 60px;
+    border-radius: 10px;
+    color: aliceblue;
+    font-weight: bold;
+    padding: 0.5rem 2rem;
+    background-image: linear-gradient(to left, #4200fc , #f901fc);
+  }
+  
+  .home-predict-save-btn:hover {
+    transform: scale(1.03);
+    border-color: #8348f2;
+  }
+  
+  .home-predict-save-register-link {
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 1rem;
+    color: aliceblue;
+    font-family: 'Arsenal', sans-serif;
+    font-weight: 700;
+    margin-bottom: 0.7rem;
+  }
+  
+  @media screen and (max-width: 550px) {
+  
+  .home-predict-save-title {
+    font-size: 1.3rem;
+  }
+  .home-predict-save-form {
+    width: 250px;
+  }
+  
+  .home-predict-save-btn2{
+    font-size: 1rem;
+    height: 55px;
+  }
+  
+  .home-predict-save-input {
+    height: 40px;
+  }
+  }

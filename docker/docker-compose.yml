@@ -1,0 +1,87 @@
+version: '3.7'
+
+services:
+  node:
+    container_name: ailungx_backend
+    build:
+      context: ../datn-ailungx-backend/
+      dockerfile: Dockerfile
+    ports:
+      - 5000:5000
+    volumes:
+      - ../datn-ailungx-backend:/app
+      - /app/node_modules/
+    command: npm start
+    restart: unless-stopped
+    networks:
+      - common
+    depends_on:
+      - modelapi
+    links:
+      - modelapi
+
+  modelapi:
+    container_name: ailungx_model_api
+    build:
+      context: ../datn-xray-model-api/
+      dockerfile: Dockerfile
+    ports:
+      - 9000:9000
+    command: python3 main.py
+    restart: unless-stopped
+    networks:
+      - common
+
+  nginx:
+    image: nginx:1.23.3
+    ports:
+      - 3000:3000
+    volumes:
+      - ../datn_ailungx_frontend/build:/usr/share/nginx/html
+      - ./default.conf:/etc/nginx/conf.d/default.conf
+    restart: unless-stopped
+    depends_on:
+      - node
+    networks:
+      - common
+  
+  localtunnel:
+    build:
+      context: ../localtunnel/
+      dockerfile: Dockerfile
+    command: --local-host nginx --port 3000 --subdomain ailungx
+    depends_on:
+      - nginx
+  
+  ngrok:
+      image: wernight/ngrok
+      restart: unless-stopped
+      command: ["ngrok", "http", "nginx:3000"]
+      volumes:
+        - ./ngrok.yml:/home/ngrok/.ngrok2/ngrok.yml
+      ports:
+        - 4040:4040
+      depends_on:
+        - nginx
+      networks:
+        - common
+
+  webhookrelay:
+      container_name: webhookrelay
+      image: webhookrelay/webhookrelayd:latest
+      network_mode: host      
+      command:
+        - --mode 
+        - tunnel
+      restart: always
+      environment:
+        # Authentication
+        - RELAY_KEY=${RELAY_KEY}
+        - RELAY_SECRET=${RELAY_SECRET}
+        # One or more tunnels must be set in the .env file
+        - TUNNELS=${TUNNELS}
+        - REGION=sg # eu, au, us-west (defaults to eu) 
+
+networks:
+  common:
+    driver: bridge

@@ -1,0 +1,8 @@
+version: "2"
+authtoken: 2G1mh9PyTuJJUHL6PrcOWwsunUC_2DEe63x4Cna5JBRhXceoS
+web_addr: 0.0.0.0:4040
+tunnels:
+  first:
+    addr: 3000
+    proto: http
+    host_header: localhost:3000

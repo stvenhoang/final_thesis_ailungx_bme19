@@ -1,0 +1,165 @@
+.send-mail-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #sendmail-back-icon {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+#sendmail-back-icon:hover {
+    background: linear-gradient(to left, #4200fc , #f901fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+  .send-mail-container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    height: 800px;
+    min-width: 20%;
+    background-color: #161616;
+  }
+  
+  .send-mail-title {
+    font-weight: 700;
+    font-size: 1.5rem;
+    background: linear-gradient(to left, #f901fc, #f901fc, #37d1eb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+    font-family: 'Arsenal', sans-serif;
+  }
+
+  .send-mail-form {
+    display: flex;
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    width: 1000px;
+    min-width: 20%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-family: 'Arsenal', sans-serif;
+  }
+  .send-mail-input {
+    border: none;
+    padding: 0.35rem;
+    padding-left: 0.7rem;
+    font-family: 'Arsenal', sans-serif;
+    margin: 0.75rem 0;
+    border-radius: 10px;
+    width: 100%;
+    height: 60px;
+    font-size: medium;
+    background-color: #222222;
+    color: aliceblue;
+  }
+
+  .send-mail-input-message {
+    border: none;
+    padding: 0.35rem;
+    padding-left: 0.7rem;
+    font-family: 'Arsenal', sans-serif;
+    margin: 0.75rem 0;
+    border-radius: 10px;
+    width: 100%;
+    height: 200px;
+    font-size: medium;
+    background-color: #222222;
+    color: aliceblue;
+  }
+  
+  .send-mail-input:active{
+    background-color: #222222;
+  }
+  
+  .send-mail-label-container {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+  }
+  
+  .material-symbols-outlined{
+    color: aliceblue;
+    padding-top: 0.35rem;
+    margin-right: 0.5rem;
+  }
+  
+  .send-mail-label {
+    font-size: 1rem;
+    color: #fff;
+    letter-spacing: 0.1rem;
+    margin-top: 0.5rem;
+    font-weight: bold;
+    font-family: 'Arsenal', sans-serif;
+  }
+  
+  .send-mail-error{
+    font-size: 1rem;
+    color: red;
+    letter-spacing: 0.1rem;
+    margin-top: 0.5rem;
+    font-family: 'Arsenal', sans-serif;
+  }
+  
+  .send-mail-btn {
+    cursor: pointer;
+    border: none;
+    align-self: center;
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    font-family: 'Arsenal', sans-serif;
+    padding: 0.65rem;
+    width: 100%;
+    height: 60px;
+    border-radius: 10px;
+    color: aliceblue;
+    font-weight: bold;
+    padding: 0.5rem 2rem;
+    background-image: linear-gradient(to left, #4200fc , #f901fc);
+  }
+  
+  .send-mail-btn:hover {
+    transform: scale(1.03);
+    border-color: #8348f2;
+  }
+  
+  @media screen and (max-width: 1170px) {
+    .send-mail-form{
+        width: 400px;
+    }
+  }
+  @media screen and (max-width: 550px) {
+  
+    #sendmail-back-icon {
+        margin-top: 20px;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+
+  .send-mail-title {
+    font-size: 1.3rem;
+  }
+  .send-mail-form {
+    width: 250px;
+  }
+  
+  .send-mail-btn{
+    font-size: 1rem;
+    height: 55px;
+  }
+  
+  .send-mail-input {
+    height: 40px;
+  }
+  
+  }

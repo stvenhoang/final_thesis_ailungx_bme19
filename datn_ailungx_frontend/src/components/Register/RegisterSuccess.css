@@ -1,0 +1,66 @@
+.register-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.register-success-container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 12px;
+    height: 500px;
+    width: 35rem;
+    min-width: 20%;
+    background-color: #161616;
+}
+
+.register-success-div{
+    color: aliceblue;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    font-family: 'Arsenal', sans-serif;
+}
+
+.register-success-login-title {
+    background: linear-gradient(to left, #4200fc , #f901fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.3rem;
+    font-family: 'Arsenal', sans-serif;
+    margin-bottom: 1.3rem;
+  }
+  
+  .register-success-login-link {
+    text-decoration: none;
+    cursor: pointer;
+    color: aliceblue;
+    font-size: 1.6rem;
+    font-family: 'Arsenal', sans-serif;
+    font-weight: 700;
+  }
+
+  .register-success-login-link:hover{
+    color: #e76f54;
+    transform: scale(1.03);
+  }
+
+  @media screen and (max-width: 550px) {
+    .register-success-div{
+        font-size: 1.2rem;
+    }
+
+    .register-success-login-title{
+        font-size: 1rem;
+    }
+
+    .register-success-login-link{
+        font-size: 1.2rem;
+    }
+  }
+

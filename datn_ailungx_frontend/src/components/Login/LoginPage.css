@@ -1,0 +1,167 @@
+.login-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+.login-container {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  height: 630px;
+  width: 30rem;
+  min-width: 20%;
+  background-color: #161616;
+}
+
+.login-title {
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-family: 'Arsenal', sans-serif;
+  background: linear-gradient(to left, #f901fc, #f901fc, #37d1eb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+}
+.login-form {
+  display: flex;
+  margin-top: 1rem;
+  width: 400px;
+  min-width: 20%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.login-input {
+  border: none;
+  padding: 0.35rem;
+  padding-left: 0.7rem;
+  font-family: 'Arsenal', sans-serif;
+  margin: 0.75rem 0;
+  border-radius: 10px;
+  width: 100%;
+  height: 60px;
+  font-size: 1rem;
+  background-color: #222222;
+  color: aliceblue;
+}
+
+.login-input:active{
+  background-color: #222222;
+}
+
+.login-label-container {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+}
+
+.material-symbols-outlined{
+  color: aliceblue;
+  padding-top: 0.35rem;
+  margin-right: 0.5rem;
+}
+
+.login-label {
+  font-size: 1rem;
+  color: #fff;
+  letter-spacing: 0.1rem;
+  margin-top: 0.5rem;
+  font-weight: bold;
+  font-family: 'Arsenal', sans-serif;
+}
+
+.login-error{
+  font-size: 1rem;
+  color: red;
+  letter-spacing: 0.1rem;
+  margin-top: 0.5rem;
+  font-family: 'Arsenal', sans-serif;
+}
+
+.login-btn {
+  cursor: pointer;
+  border: none;
+  align-self: center;
+  margin-top: 1rem;
+  font-size: 1.3rem;
+  font-family: 'Arsenal', sans-serif;
+  padding: 0.65rem;
+  width: 100%;
+  height: 60px;
+  border-radius: 10px;
+  color: aliceblue;
+  font-weight: bold;
+  padding: 0.5rem 2rem;
+  background-image: linear-gradient(to left, #4200fc , #f901fc);
+}
+
+.login-btn:hover {
+  transform: scale(1.03);
+  border-color: #8348f2;
+}
+.login-register {
+  margin: 2rem 1rem 0 1rem;
+  font-size: 1rem;
+  font-family: 'Arsenal', sans-serif;
+  color: #8348f2;
+}
+.login-register-link {
+  text-decoration: none;
+  cursor: pointer;
+  margin-top: 1rem;
+  color: aliceblue;
+  font-family: 'Arsenal', sans-serif;
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+}
+
+.login-register-link:hover {
+  color: #e76f51;
+  transform: scale(1.03);
+}
+
+.login-forgotpass-link {
+  text-decoration: none;
+  cursor: pointer;
+  margin: 0.5rem 0 1rem 0;
+  color: #636363;
+  font-weight: 700;
+  font-family: 'Arsenal', sans-serif;
+}
+
+.login-forgotpass-link:hover{
+  color: #e76f51;
+  transform: scale(1.03);
+}
+
+@media screen and (max-width: 550px) {
+
+.login-title {
+  font-size: 1.3rem;
+}
+.login-form {
+  width: 250px;
+}
+
+.login-btn{
+  font-size: 1rem;
+  height: 55px;
+}
+
+.login-input {
+  height: 40px;
+}
+
+.login-forgotpass-link {
+  font-size: 0.8rem;
+}
+
+.login-register, .login-register-link{
+  font-size: 0.9rem;
+}
+}

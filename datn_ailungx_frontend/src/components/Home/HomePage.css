@@ -1,0 +1,121 @@
+.h1-home{
+    font-size: 3rem;
+    text-transform: capitalize;
+    background: linear-gradient(to left, #f901fc, #f901fc, #37d1eb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Arsenal', sans-serif;
+}
+
+.p-home{
+    margin-top: 20px;
+    font-size: 1.3rem;
+    text-transform: capitalize;
+    font-family: 'Arsenal', sans-serif;
+}
+
+.content-home{
+    color: aliceblue;
+    margin-top: 170px;
+    margin-left: 60px;
+}
+
+.main-home{
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+}
+
+.img-home{
+    margin-top: 100px;
+    margin-left: 150px;
+    width: 80%;
+    
+}
+
+
+.img-home:hover{
+    transform: scale(1.03);
+    transition: 2s;
+    cursor: pointer;
+}
+
+.btn-home{
+    margin-top: 5%;
+    background: #090908;
+    cursor: pointer;
+    color: aliceblue;
+    border-style: solid;
+    border-color: aliceblue;
+    border-radius: 20px;
+    position: relative;
+    text-transform: capitalize;
+    transform: scale(1);
+    padding: 1rem;
+    float: left;
+    font-size: 1.3rem;
+    font-family: 'Arsenal', sans-serif;
+}
+
+.btn-div-home{
+    display: flex;
+    column-gap: 5%;
+}
+
+.btn-home:hover {
+    transform: scale(1.05);
+    background: linear-gradient(to left, #f901fc, #37d1eb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@media screen and (max-width: 1080px) {
+.main-home{
+    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+        
+.content-home{
+    margin-top: 50px;
+    margin-left: 0px;
+}
+.h1-home{
+    font-size: 1.5rem;
+}
+.p-home{
+    font-size: 1rem;
+}
+.img-home{
+    margin-left: 0px;
+    margin-top: 50px;
+    width: 400px;
+    
+}
+
+.btn-home{
+    font-size: 1rem;
+    margin-top: 40px;
+
+}
+
+.btn-div-home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 5%;
+}
+}
+
+@media screen and (max-width: 500px){
+
+.img-home{
+    width: 300px;
+}
+
+.btn-div-home{
+    column-gap: 10%;
+}
+
+}
