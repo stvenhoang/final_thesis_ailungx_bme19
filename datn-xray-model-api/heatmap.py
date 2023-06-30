@@ -27,7 +27,7 @@ class HeatmapGenerator():
 
     # --------------------------------------------------------------------------------
 
-    def generate(self, imagePil, imageOri, transCrop):
+    def generate(self, imagePil, imageOri, transCrop, predictresult):
 
         # ---- Load image, transform, convert
         imageData = self.transformSequence(imagePil)
@@ -56,12 +56,12 @@ class HeatmapGenerator():
         imgOriginal = cv2.resize(imgOriginal, (transCrop, transCrop))
 
         npHeatmap /= npHeatmap.max()
-        # cam = npHeatmap / np.max(npHeatmap)
         cam = cv2.resize(npHeatmap, (transCrop, transCrop))
+        if (predictresult == "No Finding"):
+            cam = cam * 0 + 0.12345223
         heatmap = cv2.applyColorMap(np.uint8(255.0 * cam), cv2.COLORMAP_JET)
 
         img = heatmap.astype(np.float) + imgOriginal.astype(np.float)
-        # img = heatmap * 0.5 + imgOriginal
         img = img / img.max() * 255.0
 
         retval, buffer = cv2.imencode('.jpg', img)

@@ -3,6 +3,7 @@ import "./RegisterPage.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { registerUser } from "../../redux/apiRequest";
+import { registerFailed } from "../../redux/authSlice";
 const RegisterPage = () => {
     const [email, setEmail] = useState("");
     const [username, setUsername] = useState("");
@@ -17,6 +18,7 @@ const RegisterPage = () => {
         if (user) {
           navigate("/");
         }
+        dispatch(registerFailed(null));
     }, []);
 
     const handleRegister = (e) => {

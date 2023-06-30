@@ -1,0 +1,56 @@
+.home-addlabel-label {
+    cursor: pointer;
+    align-items: center;
+    font-weight: 400;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: aliceblue;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    padding: 5px;
+    border: 3px dashed;
+    border-radius: 6px;
+    font-family: 'Arsenal', sans-serif;
+}
+
+.home-addlabel-container{
+    margin: 20px;
+}
+
+.home-addlabel-container2 {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    width: 687.219px;
+    border-radius: 12px;
+    border: 3px solid transparent;
+    border-color: #00c7f0;
+}
+
+.home-addlabel-img {
+    width: 400px;
+    margin-left: 60px;
+}
+
+@media screen and (max-width: 1080px) {
+    .home-addlabel-img {
+        width: 300px;
+        margin-left: 30px;
+    }
+    .home-addlabel-container2 {
+        width: 471px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .home-addlabel-img {
+        width: 150px;
+        margin-left: 10px;
+    }
+    .home-addlabel-container2 {
+        width: 296px;
+    }
+}

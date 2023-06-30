@@ -3,6 +3,7 @@ import './LoginPage.css'
 import { Link, useNavigate } from "react-router-dom";
 import { loginUser } from '../../redux/apiRequest';
 import { useDispatch, useSelector } from 'react-redux';
+import { loginFailed } from '../../redux/authSlice';
 const LoginPage = () => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
@@ -14,7 +15,8 @@ const LoginPage = () => {
     useEffect(() => {
         if (user) {
           navigate("/");
-        }    
+        }
+        dispatch(loginFailed(null));    
     }, []);
 
     const handleLogin = (e) => {

@@ -14,6 +14,7 @@ const HomePageUser = () => {
     const [predictHeatmapimg, setPredictHeatmapimg] = useState(null);
     const [predictErr, setPredictErr] = useState(null);
     const user = useSelector((state) => state.auth.login?.currentUser);
+    const doctor = user?.vipmember;
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const axiosJWT = createAxiosJWT(user, dispatch);
@@ -103,6 +104,11 @@ const HomePageUser = () => {
         });
     }
 
+    const handleAddLabel = (e) => {
+        e.preventDefault();
+        navigate("/addlabel");
+    };
+
     
     return (
         <section className="home-predict-container">
@@ -115,6 +121,7 @@ const HomePageUser = () => {
                                 uploadImage(e);}}></input>
                         Upload Image
                     </label>
+                    {doctor && (<div className="home-addlabel" onClick={handleAddLabel} >Add label</div>)}
                 </div>
                 <img className="home-predict-upload-img" src="https://i.ibb.co/25dzcXr/Artboard-2.png" alt="Predictimg"></img>
                 

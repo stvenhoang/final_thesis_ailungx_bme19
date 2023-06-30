@@ -2,6 +2,7 @@ const User = require("../models/User");
 var nodemailer = require('nodemailer');
 const fs = require("fs");
 const axios = require('axios');
+const NewLabel = require("../models/NewLabel");
 const cloudinary = require('cloudinary').v2;
 
 // Cloudinary configuration 
@@ -77,7 +78,7 @@ const userControllers = {
             const heatmapImageUrl = await userControllers.uploadImageCloudinary(req.user.id, folderNameHeatmap, base64ImageHeatmap);
 
             if (originalImageUrl == "Cloudinary Error"|| heatmapImageUrl == "Cloudinary Error") {
-                return res.status(404).json(base64ImageOriginal);
+                return res.status(404).json("Cloudinary Error");
             }
             const newValue = { $push: { images : {"predict_id": req.body.predict_id, "image_id": req.body.image_id, "age": req.body.age , "gender": req.body.gender, "patientemail": req.body.patientemail, "image": originalImageUrl, "predict": req.body.predict, "imageheatmap": heatmapImageUrl, "conclusion": req.body.conclusion, "time": req.body.time }} };
             const newPredictID = { $set: {numpredict: req.body.predict_id + 1}};
@@ -175,6 +176,29 @@ const userControllers = {
             });
             
             res.status(200).json("An email has been sent to patient!");
+        } catch (err) {
+            res.status(500).json(err);
+        }
+    },
+
+    addLabel: async (req, res) => {
+        try {
+            const folderNameNewLabel = `FinalthesisImages/${req.user.id}/newlabel`;
+            const base64ImageNewLabel = 'data:image/jpeg;base64,' + req.body.image;
+            const newLabelImageUrl = await userControllers.uploadImageCloudinary(req.user.id, folderNameNewLabel, base64ImageNewLabel);
+            if (newLabelImageUrl == "Cloudinary Error") {
+                return res.status(404).json("Cloudinary Error");
+            }
+            //Create a new image label
+            const newImageLabel = await new NewLabel({
+                username: req.body.username,
+                email: req.body.email,
+                image: newLabelImageUrl,
+                label: req.body.label
+            });
+            //Save the new image label
+            const newLabel = await newImageLabel.save();
+            return res.status(200).json("Added label successfully!")
         } catch (err) {
             res.status(500).json(err);
         }

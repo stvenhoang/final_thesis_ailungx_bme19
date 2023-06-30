@@ -45,14 +45,6 @@ services:
     networks:
       - common
   
-  localtunnel:
-    build:
-      context: ../localtunnel/
-      dockerfile: Dockerfile
-    command: --local-host nginx --port 3000 --subdomain ailungx
-    depends_on:
-      - nginx
-  
   ngrok:
       image: wernight/ngrok
       restart: unless-stopped

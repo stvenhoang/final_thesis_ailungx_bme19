@@ -17,7 +17,6 @@ router.post("/forgot-password", authControllers.forgotPassword);
 
 router.get("/reset-password/:id/:token", authControllers.resetPassword);
 
-
 router.post("/reset-password/:id/:token", authControllers.resetPasswordpost);
 
 router.post("/predict", middlewareController.verifyToken, userControllers.predict);
@@ -30,4 +29,11 @@ router.get("/getallpredict", middlewareController.verifyToken, userControllers.g
 
 router.post("/mailpredict", middlewareController.verifyToken, userControllers.mailPredict);
 
+router.post("/addlabel", middlewareController.verifyTokenandAdminAuth, userControllers.addLabel);
+
 module.exports = router;
+
+
+
+
+

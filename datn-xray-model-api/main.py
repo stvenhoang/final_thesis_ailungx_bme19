@@ -7,7 +7,6 @@ from torchvision import transforms
 import base64
 import numpy as np
 from waitress import serve
-from efficientnet_b0 import Efficientnet_b0
 from heatmap import HeatmapGenerator
 from densenet121 import DenseNet121
 
@@ -19,7 +18,7 @@ img_post_args.add_argument("imgb64", type=str, help="B64 of the image is require
 
 # Load model
 device = torch.device("cpu")
-model = torch.load('efficientnet_b0_Chest14.pth', map_location=torch.device("cpu"))
+model = torch.load('densenet121_Chest14.pth', map_location=torch.device("cpu"))
 
 
 
@@ -32,7 +31,7 @@ data_transforms = transforms.Compose([
         transforms.Normalize(mean, std)
     ])
 
-clasname = ['Emphysema', 'Hernia', 'Nodule', 'Effusion', 'Pleural_Thickening',
+classname = ['Emphysema', 'Hernia', 'Nodule', 'Effusion', 'Pleural_Thickening',
        'Pneumonia', 'Cardiomegaly', 'Infiltration', 'Consolidation',
        'Atelectasis', 'Pneumothorax', 'Mass', 'Edema', 'Fibrosis']
 
@@ -53,20 +52,18 @@ class PostImg(Resource):
         with torch.no_grad():
             img = img.to(device)
             output = model(img)
-            # _, predicted = torch.max(output, 1)
-            # class_index = predicted.item()
-            pred = torch.sigmoid(output).data > 0.56
+            pred = output > 0.4
             pred = pred.to(torch.float32)
             pred = pred.cpu().squeeze().detach().numpy().tolist()
             for i, e in enumerate(pred):
                 if e==1.0:
-                    pred_classname.append(clasname[i])
+                    pred_classname.append(classname[i])
         predictresult = ", ".join(pred_classname)
         if predictresult == "":
             predictresult = "No Finding"
         # Return the result as JSON
         h = HeatmapGenerator('densenet121_Chest14.pth', 224)
-        hmImg = h.generate(img_pil, img_pd, 224)
+        hmImg = h.generate(img_pil, img_pd, 224, predictresult)
         result = {'predict_result': predictresult,
                   'heatmap_image': hmImg}
         return jsonify(result)

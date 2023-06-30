@@ -29,9 +29,7 @@ const SyndromesPage = () => {
                                 <div className="syndrome-text">{syndrome.description}</div>
                             </div>
                         )
-                    })}
-                    {/* <img className="home-predict-upload-img" src="https://i.ibb.co/CHqqkHq/19199767-Converted.png" alt="Syndromesimg"></img> */}
-                
+                    })}            
             </div>
             
             

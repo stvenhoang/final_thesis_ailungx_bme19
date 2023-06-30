@@ -15,6 +15,7 @@ import PredictSendMail from './components/Predict/PredictSendMail';
 import ResetPassPage from './components/ForgotPass/ResetPassPage';
 import RegisterConfirmPage from './components/Register/RegisterConfirmPage';
 import SyndromesPage from './components/Syndromes/SyndromesPage';
+import HomeAddLabel from './components/Home/HomeAddLabel';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Routes>
           <Route path='/' element={<HomePage/>}></Route>
           <Route path='/savepredict' element={<HomePageSavePredict/>}></Route>
+          <Route path='/addlabel' element={<HomeAddLabel/>}></Route>
           <Route path='/about' element={<AboutPage/>}></Route>
           <Route path='/syndromes' element={<SyndromesPage/>}></Route>
           <Route path='/predict' element={<PredictPage/>}></Route>

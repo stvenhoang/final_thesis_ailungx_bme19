@@ -8,6 +8,7 @@ const apiRoute = require('./routes/api');
 const app = express()
 dotenv.config();
 
+//Mongodb connection
 mongoose.set("strictQuery",true);
 mongoose.connect(process.env.MONGODB_URL, () => 
     {
@@ -33,3 +34,6 @@ app.use("/api", apiRoute);
 const host = '0.0.0.0';
 const port = 5000;
 app.listen(port, host, () => console.log(`Example app listening on port ${port}!`));
+
+
+
