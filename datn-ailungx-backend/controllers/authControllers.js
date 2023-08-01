@@ -5,7 +5,7 @@ const jwt = require("jsonwebtoken");
 const Rftoken = require("../models/Rftoken");
 var nodemailer = require('nodemailer');
 const VerifyUserToken = require("../models/VerifyUserToken");
-const frontend_url = "https://b6bf-1-54-154-16.ngrok-free.app";
+const frontend_url = process.env.FRONTEND_URL;
 const authControllers = {
 
     generateRegisterToken: (userEmail) => {
