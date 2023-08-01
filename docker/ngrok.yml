@@ -1,5 +1,5 @@
 version: "2"
-authtoken: 2G1mh9PyTuJJUHL6PrcOWwsunUC_2DEe63x4Cna5JBRhXceoS
+authtoken: Your NGROK Auth token
 web_addr: 0.0.0.0:4040
 tunnels:
   first:
