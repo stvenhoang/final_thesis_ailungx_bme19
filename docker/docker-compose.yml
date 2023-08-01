@@ -58,22 +58,6 @@ services:
       networks:
         - common
 
-  webhookrelay:
-      container_name: webhookrelay
-      image: webhookrelay/webhookrelayd:latest
-      network_mode: host      
-      command:
-        - --mode 
-        - tunnel
-      restart: always
-      environment:
-        # Authentication
-        - RELAY_KEY=${RELAY_KEY}
-        - RELAY_SECRET=${RELAY_SECRET}
-        # One or more tunnels must be set in the .env file
-        - TUNNELS=${TUNNELS}
-        - REGION=sg # eu, au, us-west (defaults to eu) 
-
 networks:
   common:
     driver: bridge
